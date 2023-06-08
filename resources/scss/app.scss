@@ -1,1 +1,186 @@
 @import '~bootstrap/scss/bootstrap';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  #tutto{
+    height: 100vh;
+  }
+
+  nav{
+    img{
+      height: 50px;
+    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10%;
+    ul{
+      display: flex;
+      list-style: none;
+      li{
+        margin: 0 1rem;
+        padding: 1rem 0;
+        a{
+          color: black;
+          text-decoration: none;
+        }
+        &:hover{
+          border-bottom: 3px solid $blue-DC;
+          a{
+            color: $blue-DC;
+          }
+        }
+      }
+    }
+  }
+  
+  .container{
+    width: 70%;
+    margin: auto;
+  }
+
+  .active-nav{
+          border-bottom: 3px solid $blue-DC;
+          a{
+            color: $blue-DC;
+          }
+        }
+
+  // parte main
+  #content-goes-here{
+    background-color: black;
+    color: white;
+    padding: 1rem 0;
+  }
+
+  #links-DC{
+    background-color: $blue-DC;
+    div{
+      img{
+      height: 30px;
+      }
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 10%;
+      ul{
+        display: flex;
+        list-style: none;
+        li{
+          display: flex;
+          align-items: center;
+          margin: 0 1rem;
+          padding: 1rem 0;
+          font-size: small;
+          a{
+            margin: 0 1rem;
+            color: white;
+            text-decoration: none;
+          }
+          }
+        }
+    }
+  }
+
+  // parte footer
+  #all-links{
+    background-image: url(./assets/img/footer-bg.jpg);
+    background-size: cover;
+
+    .container{
+      display: flex;
+      justify-content: space-between;
+      background-image: url(./assets/img/dc-logo-bg.png);
+      background-position: center right;
+      background-size: 40%;
+      background-repeat: no-repeat;
+      div{
+        padding: 1rem 0;
+        display: flex;
+        ul{
+        list-style: none;
+        color: white;
+        margin: 0 1rem;
+        li{
+          padding: 0.25rem 0;
+          font-size: small;
+          a{
+            color: gray;
+            text-decoration: none;
+          }
+          }
+        }
+      }
+    }
+  }
+
+  #sign-up{
+    background-color: rgb(48 48 48);
+    padding: 1rem 0;
+    #sign-up-c{
+      display: flex;
+      justify-content: space-between;
+      button{
+        background-color: rgb(48 48 48);
+        color: white;
+        padding: 0.5rem;
+        border: 2px solid $blue-DC;
+      }
+      ul{
+        display: flex;
+        align-items: center;
+        list-style: none;
+        color: $blue-DC;
+        h2{
+          margin: 0 1rem;
+        }
+        li{
+          display: flex;
+          align-items: center;
+          margin: 0 0.5rem;
+        }
+      }
+    }
+  }
+
+  //CONTENTS
+  #contents{ 
+    a{
+        color: white;
+        padding: 0.5rem 1rem;
+        background-color: $blue-DC;
+        text-decoration: none;
+    }
+    #container-series{
+        // display: grid;
+        // grid-template-columns: auto auto auto auto auto auto;
+        margin: 2rem 0;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        #content{
+            width: calc(100% / 7);
+            margin: 0.25rem;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    #load{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+//JUMBOTRON
+#jumbotron{
+    background-image: url(../assets/img/jumbotron.jpg);
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 300px;
+}
