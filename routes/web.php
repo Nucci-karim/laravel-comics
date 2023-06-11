@@ -14,7 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('pages.welcome');
+
+    $series = config('db.series'); 
+
+    return view('pages.welcome', compact('series'));
 })->name('home');
 
 Route::get('/about', function () {

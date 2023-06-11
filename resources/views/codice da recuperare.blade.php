@@ -16,15 +16,16 @@
     <main>
       <!-- content goes here -->
       <section id="content-goes-here">
-        <div id="jumbotron"></div>
-        <div class="container">
+        <div id="jumbotron"></div>        <div class="container">
             <div id="contents">
                 <a>CURRENT SERIES</a>
                 <div id="container-series">
-                    <div id="content" v-for="(elem, index) in series" :key="index">
-                        <img :src="elem.thumb" alt="thumb">
-                        <h3>{{ elem.series }}</h3>
+                  @foreach($series as $elem)
+                    <div id="content" v-for="(elem, index) in series">
+                        <img src="{{ $elem['thumb'] }}" alt="thumb">
+                        <h3>{{ $elem['series'] }}</h3>
                     </div>
+                  @endforeach
                 </div>
                 <div id="load">
                     <a href="/">LOAD MORE</a>
